@@ -1,0 +1,21 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-alt-l": "editor::Format",
+      "cmd-shift-r": "editor::Rename",
+      "cmd-d": "editor::DuplicateLineDown",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-1": "workspace::ToggleLeftDock",
+      "cmd-2": "workspace::ToggleRightDock",
+      "ctrl-f5": ["task::Spawn", { "task_name": "uv/python" }],
+      "cmd-alt-r": ["task::Spawn", { "task_name": "r/rust" }],
+      "cmd-t": "workspace::ToggleBottomDock",
+      "cmd-shift-t": "workspace::NewTerminal",
+    },
+  },
+]

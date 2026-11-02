@@ -1,0 +1,128 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  //-------------------------------
+  // FONT SIZES
+  //-------------------------------
+  // The default font size for text in the UI//
+  "ui_font_size": 18,
+  // The default font size for text in the editor
+  "buffer_font_size": 18,
+
+  //-------------------------------
+  // APPEARANCE
+  //-------------------------------
+  // The name of the Zed theme to use for the UI.
+  //
+  // `mode` is one of:
+  // - "system": Use the theme that corresponds to the system's appearance
+  // - "light": Use the theme indicated by the "light" field
+  // - "dark": Use the theme indicated by the "dark" field
+  "theme": {
+    "mode": "system",
+    "light": "JetBrains Light",
+    "dark": "JetBrains Dark",
+  },
+  "icon_theme": "Catppuccin Mocha",
+  // Whether to colorize brackets in the editor.
+  // (also known as "rainbow brackets")
+  //
+  // The colors that are used for different indentation levels are defined in the theme (theme key: `accents`).
+  // They can be customized by using theme overrides.
+  "colorize_brackets": true,
+
+  //-------------------------------
+  // KEY BINDINGS
+  //-------------------------------
+  // The name of a base set of key bindings to use.
+  // This setting can take the following values:
+  //
+  // 1. "Zed"
+  // 2. "VSCode"
+  // 3. "Atom"
+  // 4. "JetBrains"
+  // 5. "SublimeText"
+  // 6. "TextMate"
+  // 7. "Emacs"
+  // 8. "Cursor"
+  // 9. "None"
+  "base_keymap": "Zed",
+
+  //-------------------------------
+  // EDITOR BEHAVIOUR
+  //-------------------------------
+  "autosave": "off",
+  "format_on_save": "on",
+  "restore_on_startup": "last_session",
+  "show_completions_on_input": true,
+
+  //-------------------------------
+  // LANGUAGES
+  //-------------------------------
+  "languages": {
+    "Python": {
+      "code_actions_on_format": {
+        "source.organizeImports.ruff": true,
+      },
+      "formatter": {
+        "language_server": {
+          "name": "ruff",
+        },
+      },
+      "debuggers": ["Debugpy"],
+      "language_servers": [
+        "!basedpyright",
+        "ruff",
+        "ty",
+        "!pyrefly",
+        "!pyright",
+        "!pylsp",
+        "...",
+      ],
+      "format_on_save": "on",
+    },
+  },
+
+  //-------------------------------
+  // TELEMETRY
+  //-------------------------------
+  "telemetry": {
+    // Send debug info like crash reports.
+    "diagnostics": false,
+    // Send anonymized usage data like what languages you're using Zed with.
+    "metrics": false,
+    // Allow sending requests to Anthropic models that cannot be offered with
+    // Zero Data Retention
+    "anthropic_retention": false,
+  },
+
+  //-------------------------------
+  // AI
+  //-------------------------------
+  // Whether to disable all AI features in Zed.
+  //
+  // Default: false
+  "disable_ai": true,
+
+  //-------------------------------
+  // AUTO-UPDATE
+  //-------------------------------
+  // Automatically update Zed. This setting may be ignored on Linux if
+  // installed through a package manager.
+  "auto_update": true,
+
+  //-------------------------------
+  // TITLE BAR
+  //-------------------------------
+  "title_bar": {
+    "show_sign_in": false,
+    "show_user_picture": false,
+    "show_onboarding_banner": false,
+  },
+}
